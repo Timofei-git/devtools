@@ -10,7 +10,7 @@ public class StudentList {
     studentList = new ArrayList<>();
   }
 
-   public void addStudent(Student student) {
+  public void addStudent(Student student) {
     if (student != null) {
       studentList.add(student);
     }
@@ -19,4 +19,5 @@ public class StudentList {
   public List<Student> getStudentsFromSpecificCity(String city) {
     return studentList.stream().filter(s -> s.city().equals(city)).toList();
   }
+
 }
