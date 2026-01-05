@@ -8,7 +8,7 @@ public class ProgressDemo {
     if (progress.readyForSprint()) {
       System.out.println("Status: sprint ready");
     } else {
-       System.out.println("Status: backlog first");
+      System.out.println("Status: backlog first");
     }
     System.out.println("Строчка добавлена для первого коммита");
   }
