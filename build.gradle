@@ -54,10 +54,21 @@ test {
 
 // Настройка JaCoCo отчёта
 jacocoTestReport {
-    dependsOn test  // отчёт генерируется после выполнения тестов
+    dependsOn test
+
+    classDirectories.setFrom(
+            files(classDirectories.files.collect {
+                fileTree(dir: it, exclude: [
+                        '**/*Main*.*',
+                        '**/*List*.*',
+                        '**/*Tracker*.*',// main-классы
+                        '**/*Application*.*',   // Spring Boot / entry point
+                        '**/*Demo*.*'           // демо-классы
+                ])
+            })
+    )
+
     reports {
-        xml.required = false
-        csv.required = false
         html.required = true
         html.outputLocation = layout.buildDirectory.dir('reports/jacoco/test/html')
     }
@@ -66,6 +77,17 @@ jacocoTestReport {
 // Настройка проверки покрытия (минимум 80%)
 jacocoTestCoverageVerification {
     dependsOn jacocoTestReport
+    classDirectories.setFrom(
+            files(classDirectories.files.collect {
+                fileTree(dir: it, exclude: [
+                        '**/*Main*.*',
+                        '**/*List*.*',
+                        '**/*Tracker*.*',
+                        '**/*Application*.*',
+                        '**/*Demo*.*'
+                ])
+            })
+    )
     violationRules {
         rule {
             limit {

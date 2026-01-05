@@ -71,9 +71,29 @@ class ProgressLoopTest {
 
   @Test
   @DisplayName("Должен корректно обработать массив когда все mentee завершили курс")
-  void doesnotThrowIllegalArgumentExceptionWithNegativeNumbers() {
+  void doesNotThrowIllegalArgumentExceptionWithNegativeNumbers() {
     assertThatCode(() -> {
       new Mentee("Иван", "Москва", "Изучить Java", 1, 2);
     }).doesNotThrowAnyException();
+  }
+
+  @Test
+  @DisplayName("Должен вернуть сообщение об ошибке когда передан null")
+  void shouldReturnErrorMessageWhenNullArray() {
+    ProgressTracker tracker = new ProgressTracker();
+
+    String result = tracker.calculateTotalProgress(null);
+
+    assertThat(result).isEqualTo("Enter at least 3 mentees");
+  }
+
+  @Test
+  @DisplayName("Должен вернуть сообщение об ошибке когда передан пустой массив")
+  void shouldReturnErrorMessageWhenEmptyArray() {
+    ProgressTracker tracker = new ProgressTracker();
+
+    String result = tracker.calculateTotalProgress(new Mentee[0]);
+
+    assertThat(result).isEqualTo("Enter at least 3 mentees");
   }
 }
