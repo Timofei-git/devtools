@@ -1,8 +1,4 @@
-Для запуска с помощью Gradle Tool Window вы должны дважды кликнуть Ctrl  ввести команду gradle run
-package ru.mentee.power - папка проекта, будет содерадть в себе другие папки
-
-Изменения для ветки DVT-4 для PR
-3 коммит 
+[![Java CI with Checkstyle and JaCoCo](https://github.com/Timofei-git/devtools/actions/workflows/ci.yml/badge.svg)](https://github.com/Timofei-git/devtools/actions/workflows/ci.yml) 
 ## Кодстайл-гайд проекта devtools
 
 Проект следует правилам Google Java Style Guide с адаптацией.
@@ -72,3 +68,6 @@ package ru.mentee.power - папка проекта, будет содерадт
 - Если вывод некорректен: проверьте логику цикла через Debug
 - Если тесты красные: откройте вывод теста, найдите AssertionError, скорректируйте метод
 - Если Debug не останавливается: убедитесь, что breakpoint установлен (красный кружок)
+
+
+добавил комментарий для DVT-8
