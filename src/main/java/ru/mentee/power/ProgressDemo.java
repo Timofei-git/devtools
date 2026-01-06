@@ -3,7 +3,8 @@ package ru.mentee.power;
 public class ProgressDemo {
   public static void main(String[] args) {
     MenteeProgress progress = new MenteeProgress("Tima", 1, 6);
-
+//закомментированный код для DVT-9
+    System.out.println("Debug: starting loop");
     System.out.println(progress.summary());
     if (progress.readyForSprint()) {
       System.out.println("Status: sprint ready");
