@@ -1,5 +1,5 @@
 package ru.mentee.power.devtools.student;
 
-public record Student(String name, String city) {
+public record Student(String name, String city, String number) {
 
 }
