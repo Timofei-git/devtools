@@ -881,3 +881,28 @@ Runbook используется в DevOps-практиках и совреме�
 - Коммиты: Conventional Commits (`feat:`, `fix:`, `docs:`)
 - Ветки: `feature/DVT-X` для задач, `master` — основная
 - Pull Request: обязателен для слияния в master
+
+
+
+
+## GATE-1: Результаты проверки
+
+**Дата прохождения:** 2026-01-13
+**Формат:** Устный экзамен (40 минут) + live coding
+
+### Основные темы
+- JDK/JRE/JVM и настройка IntelliJ IDEA
+- Gradle Wrapper и задачи сборки
+- Git локальный workflow и GitHub SSH
+- GitHub Actions CI и Checkstyle
+- Code Review и Evidence Pack
+- Live coding: FizzBuzz, сумма чётных, поиск максимального
+
+### Результат
+- ✅ Теоретические вопросы: [краткий комментарий наставника]
+- ✅ Live coding: [краткий комментарий наставника]
+- 📌 Рекомендации к Backend Core: [список тем для повторения, если есть]
+
+### Ссылки
+- [Конспект ответов (Notion/Docs)](ссылка_на_конспект)
+- [Live coding код (если сохранил в отдельной ветке)](ссылка_на_ветку)
